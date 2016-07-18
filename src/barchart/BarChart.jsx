@@ -28,6 +28,7 @@ module.exports = React.createClass({
     title: React.PropTypes.string,
     width: React.PropTypes.number,
     xAxisClassName: React.PropTypes.string,
+    xAxisTextOrient: React.PropTypes.oneOf(['horizontal', 'vertical']),
     yAxisClassName: React.PropTypes.string,
     yAxisTickCount: React.PropTypes.number,
     xAccessor: React.PropTypes.any, // TODO: prop types?
@@ -148,6 +149,7 @@ module.exports = React.createClass({
             <XAxis
               xAxisClassName={props.xAxisClassName}
               xAxisTickValues={props.xAxisTickValues}
+              xAxisTextOrient={props.xAxisTextOrient}
               xAxisLabel={props.xAxisLabel}
               xAxisLabelOffset={props.xAxisLabelOffset}
               xScale={xScale}
